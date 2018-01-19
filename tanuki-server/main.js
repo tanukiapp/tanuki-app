@@ -3,7 +3,8 @@ const api = new Kitsu()
 
 const params = {
     'filter': { 'status': 'current', 'subtype': 'TV', 'seasonYear': '2018' },
-    'page': { 'limit': 20 }
+    'page': { 'limit': 20 },
+    'sort': 'popularityRank'
 }
 
 const weekMap = ['sunday','monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']

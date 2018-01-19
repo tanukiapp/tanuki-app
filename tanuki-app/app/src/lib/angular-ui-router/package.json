@@ -1,0 +1,80 @@
+{
+  "name": "angular-ui-router",
+  "description": "State-based routing for AngularJS",
+  "version": "0.3.2",
+  "homepage": "http://angular-ui.github.com/",
+  "contributors": [
+    {
+      "name": "Nate Abele",
+      "email": "nate@radify.io",
+      "url": "https://github.com/nateabele"
+    },
+    {
+      "name": "Chris Thielen",
+      "email": "christhielen@gmail.com",
+      "url": "https://github.com/christopherthielen"
+    },
+    {
+      "name": "Tim Kindberg",
+      "url": "https://github.com/timkindberg"
+    },
+    {
+      "name": "Karsten Sperling",
+      "url": "https://github.com/ksperling"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "AngularUI",
+      "url": "https://github.com/angular-ui?tab=members"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-ui/ui-router.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angular-ui/ui-router/issues"
+  },
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/angular-ui/ui-router/blob/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "angular": "^1.0.8"
+  },
+  "devDependencies": {
+    "faithful-exec": "~0.1.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-conventional-changelog": "~1.1.0",
+    "grunt-karma": "^1.0.0",
+    "grunt-ngdocs": "~0.2.5",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-jasmine": "~0.1.3",
+    "karma-phantomjs-launcher": "~1.0.0",
+    "karma-requirejs": "~0.2.0",
+    "karma-script-launcher": "~0.1.0",
+    "load-grunt-tasks": "~0.4.0",
+    "phantomjs-polyfill": "0.0.1",
+    "requirejs": "^2.1.22",
+    "shelljs": "~0.2.6"
+  },
+  "main": "release/angular-ui-router.js",
+  "readme": "# AngularUI Router &nbsp;[![Build Status](https://travis-ci.org/angular-ui/ui-router.svg?branch=master)](https://travis-ci.org/angular-ui/ui-router)\n\n#### The de-facto solution to flexible routing with nested views\n---\n**[Download 0.2.18](https://cdn.rawgit.com/angular-ui/ui-router/0.2.18/release/angular-ui-router.js)** (or **[Minified](https://cdn.rawgit.com/angular-ui/ui-router/0.2.18/release/angular-ui-router.min.js)**) **|**\n**[Guide](https://github.com/angular-ui/ui-router/wiki) |**\n**[API](http://angular-ui.github.io/ui-router/site) |**\n**[Sample](http://angular-ui.github.com/ui-router/sample/) ([Src](https://github.com/angular-ui/ui-router/tree/gh-pages/sample)) |**\n**[FAQ](https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions) |**\n**[Resources](#resources) |**\n**[Report an Issue](https://github.com/angular-ui/ui-router/blob/master/CONTRIBUTING.md#report-an-issue) |**\n**[Contribute](https://github.com/angular-ui/ui-router/blob/master/CONTRIBUTING.md#contribute) |**\n**[Help!](http://stackoverflow.com/questions/ask?tags=angularjs,angular-ui-router) |**\n**[Discuss](https://groups.google.com/forum/#!categories/angular-ui/router)**\n\n---\n\n*_Please help us out by testing the 1.0 alpha release!_* \n\n[1.0.0alpha0 Announcement](https://github.com/angular-ui/ui-router/releases/tag/1.0.0alpha0) ([Source  Code](https://github.com/angular-ui/ui-router/tree/master)) | [Sample App](http://ui-router.github.io/sample-app/) ([Source Code](https://github.com/ui-router/sample-app)) | [Known Issues](https://github.com/angular-ui/ui-router/issues?q=is%3Aissue+is%3Aopen+label%3A1.0)\n\n\n---\n\nAngularUI Router is a routing framework for [AngularJS](http://angularjs.org), which allows you to organize the\nparts of your interface into a [*state machine*](https://en.wikipedia.org/wiki/Finite-state_machine). Unlike the\n[`$route` service](http://docs.angularjs.org/api/ngRoute.$route) in the Angular ngRoute module, which is organized around URL\nroutes, UI-Router is organized around [*states*](https://github.com/angular-ui/ui-router/wiki),\nwhich may optionally have routes, as well as other behavior, attached.\n\nStates are bound to *named*, *nested* and *parallel views*, allowing you to powerfully manage your application's interface.\n\nCheck out the sample app: http://angular-ui.github.io/ui-router/sample/\n\n-\n**Note:** *UI-Router is under active development. As such, while this library is well-tested, the API may change. Consider using it in production applications only if you're comfortable following a changelog and updating your usage accordingly.*\n\n\n## Get Started\n\n**(1)** Get UI-Router in one of the following ways:\n - clone & [build](CONTRIBUTING.md#developing) this repository\n - [download the release](http://angular-ui.github.io/ui-router/release/angular-ui-router.js) (or [minified](http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js))\n - [link to cdn](http://cdnjs.com/libraries/angular-ui-router)\n - via **[jspm](http://jspm.io/)**: by running `$ jspm install angular-ui-router` from your console\n - or via **[npm](https://www.npmjs.org/)**: by running `$ npm install angular-ui-router` from your console\n - or via **[Bower](http://bower.io/)**: by running `$ bower install angular-ui-router` from your console\n - or via **[Component](https://github.com/component/component)**: by running `$ component install angular-ui/ui-router` from your console\n\n**(2)** Include `angular-ui-router.js` (or `angular-ui-router.min.js`) in your `index.html`, after including Angular itself (For Component users: ignore this step)\n\n**(3)** Add `'ui.router'` to your main module's list of dependencies (For Component users: replace `'ui.router'` with `require('angular-ui-router')`)\n\nWhen you're done, your setup should look similar to the following:\n\n>\n```html\n<!doctype html>\n<html ng-app=\"myApp\">\n<head>\n    <script src=\"//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js\"></script>\n    <script src=\"js/angular-ui-router.min.js\"></script>\n    <script>\n        var myApp = angular.module('myApp', ['ui.router']);\n        // For Component users, it should look like this:\n        // var myApp = angular.module('myApp', [require('angular-ui-router')]);\n    </script>\n    ...\n</head>\n<body>\n    ...\n</body>\n</html>\n```\n\n### [Nested States & Views](http://plnkr.co/edit/u18KQc?p=preview)\n\nThe majority of UI-Router's power is in its ability to nest states & views.\n\n**(1)** First, follow the [setup](#get-started) instructions detailed above.\n\n**(2)** Then, add a [`ui-view` directive](https://github.com/angular-ui/ui-router/wiki/Quick-Reference#ui-view) to the `<body />` of your app.\n\n>\n```html\n<!-- index.html -->\n<body>\n    <div ui-view></div>\n    <!-- We'll also add some navigation: -->\n    <a ui-sref=\"state1\">State 1</a>\n    <a ui-sref=\"state2\">State 2</a>\n</body>\n```\n\n**(3)** You'll notice we also added some links with [`ui-sref` directives](https://github.com/angular-ui/ui-router/wiki/Quick-Reference#ui-sref). In addition to managing state transitions, this directive auto-generates the `href` attribute of the `<a />` element it's attached to, if the corresponding state has a URL. Next we'll add some templates. These will plug into the `ui-view` within `index.html`. Notice that they have their own `ui-view` as well! That is the key to nesting states and views.\n\n>\n```html\n<!-- partials/state1.html -->\n<h1>State 1</h1>\n<hr/>\n<a ui-sref=\"state1.list\">Show List</a>\n<div ui-view></div>\n```\n```html\n<!-- partials/state2.html -->\n<h1>State 2</h1>\n<hr/>\n<a ui-sref=\"state2.list\">Show List</a>\n<div ui-view></div>\n```\n\n**(4)** Next, we'll add some child templates. *These* will get plugged into the `ui-view` of their parent state templates.\n\n>\n```html\n<!-- partials/state1.list.html -->\n<h3>List of State 1 Items</h3>\n<ul>\n  <li ng-repeat=\"item in items\">{{ item }}</li>\n</ul>\n```\n\n>\n```html\n<!-- partials/state2.list.html -->\n<h3>List of State 2 Things</h3>\n<ul>\n  <li ng-repeat=\"thing in things\">{{ thing }}</li>\n</ul>\n```\n\n**(5)** Finally, we'll wire it all up with `$stateProvider`. Set up your states in the module config, as in the following:\n\n\n>\n```javascript\nmyApp.config(function($stateProvider, $urlRouterProvider) {\n  //\n  // For any unmatched url, redirect to /state1\n  $urlRouterProvider.otherwise(\"/state1\");\n  //\n  // Now set up the states\n  $stateProvider\n    .state('state1', {\n      url: \"/state1\",\n      templateUrl: \"partials/state1.html\"\n    })\n    .state('state1.list', {\n      url: \"/list\",\n      templateUrl: \"partials/state1.list.html\",\n      controller: function($scope) {\n        $scope.items = [\"A\", \"List\", \"Of\", \"Items\"];\n      }\n    })\n    .state('state2', {\n      url: \"/state2\",\n      templateUrl: \"partials/state2.html\"\n    })\n    .state('state2.list', {\n      url: \"/list\",\n      templateUrl: \"partials/state2.list.html\",\n      controller: function($scope) {\n        $scope.things = [\"A\", \"Set\", \"Of\", \"Things\"];\n      }\n    });\n});\n```\n\n**(6)** See this quick start example in action.\n>**[Go to Quick Start Plunker for Nested States & Views](http://plnkr.co/edit/u18KQc?p=preview)**\n\n**(7)** This only scratches the surface\n>**[Dive Deeper!](https://github.com/angular-ui/ui-router/wiki)**\n\n\n### [Multiple & Named Views](http://plnkr.co/edit/SDOcGS?p=preview)\n\nAnother great feature is the ability to have multiple `ui-view`s view per template.\n\n**Pro Tip:** *While multiple parallel views are a powerful feature, you'll often be able to manage your\ninterfaces more effectively by nesting your views, and pairing those views with nested states.*\n\n**(1)** Follow the [setup](#get-started) instructions detailed above.\n\n**(2)** Add one or more `ui-view` to your app, give them names.\n>\n```html\n<!-- index.html -->\n<body>\n    <div ui-view=\"viewA\"></div>\n    <div ui-view=\"viewB\"></div>\n    <!-- Also a way to navigate -->\n    <a ui-sref=\"route1\">Route 1</a>\n    <a ui-sref=\"route2\">Route 2</a>\n</body>\n```\n\n**(3)** Set up your states in the module config:\n>\n```javascript\nmyApp.config(function($stateProvider) {\n  $stateProvider\n    .state('index', {\n      url: \"\",\n      views: {\n        \"viewA\": { template: \"index.viewA\" },\n        \"viewB\": { template: \"index.viewB\" }\n      }\n    })\n    .state('route1', {\n      url: \"/route1\",\n      views: {\n        \"viewA\": { template: \"route1.viewA\" },\n        \"viewB\": { template: \"route1.viewB\" }\n      }\n    })\n    .state('route2', {\n      url: \"/route2\",\n      views: {\n        \"viewA\": { template: \"route2.viewA\" },\n        \"viewB\": { template: \"route2.viewB\" }\n      }\n    })\n});\n```\n\n**(4)** See this quick start example in action.\n>**[Go to Quick Start Plunker for Multiple & Named Views](http://plnkr.co/edit/SDOcGS?p=preview)**\n\n\n## Resources\n\n* [In-Depth Guide](https://github.com/angular-ui/ui-router/wiki)\n* [API Reference](http://angular-ui.github.io/ui-router/site)\n* [Sample App](http://angular-ui.github.com/ui-router/sample/) ([Source](https://github.com/angular-ui/ui-router/tree/gh-pages/sample))\n* [FAQ](https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions)\n* [Slides comparing ngRoute to ui-router](http://slid.es/timkindberg/ui-router#/)\n* [UI-Router Extras / Addons](http://christopherthielen.github.io/ui-router-extras/#/home) (@christopherthielen)\n \n### Videos\n\n* [Introduction Video](https://egghead.io/lessons/angularjs-introduction-ui-router) (egghead.io)\n* [Tim Kindberg on Angular UI-Router](https://www.youtube.com/watch?v=lBqiZSemrqg)\n* [Activating States](https://egghead.io/lessons/angularjs-ui-router-activating-states) (egghead.io)\n* [Learn Angular.js using UI-Router](http://youtu.be/QETUuZ27N0w) (LearnCode.academy)\n\n\n\n## Reporting issues and Contributing\n\nPlease read our [Contributor guidelines](CONTRIBUTING.md) before reporting an issue or creating a pull request.\n",
+  "readmeFilename": "README.md",
+  "_id": "angular-ui-router@0.3.2",
+  "_from": "angular-ui-router@~0.3.2"
+}
