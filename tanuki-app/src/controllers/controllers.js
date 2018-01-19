@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('app.controllers', [])
-
-  .controller('homeCtrl', function(Services, $rootScope) {
+  .controller('appCtrl', ['Services', function(Services) {
 
     const vm = this
 
@@ -47,4 +46,4 @@ angular.module('app.controllers', [])
         })
         .catch((err) => { console.log(err) })
     }
-  })
+  }])
