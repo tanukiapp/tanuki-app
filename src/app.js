@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['mangaController', 'animeController', 'app.services', 'app.components', 'ui.router', 'angularSpinner', 'pascalprecht.translate'])
+angular.module('app', ['airingController', 'upcomingController', 'app.services', 'app.components', 'ui.router', 'angularSpinner', 'pascalprecht.translate'])
 
 .config(['$stateProvider', '$urlRouterProvider', '$translateProvider', function($stateProvider, $urlRouterProvider, $translateProvider) {
   $translateProvider
@@ -22,17 +22,17 @@ angular.module('app', ['mangaController', 'animeController', 'app.services', 'ap
     })
 
     .state({
-      name: 'anime',
-      url: '/anime',
-      templateUrl: 'views/anime.html',
-      controller: 'animeController as vm'
+      name: 'airing',
+      url: '/airing',
+      templateUrl: 'views/airing.html',
+      controller: 'airingController as vm'
     })
 
     .state({
-      name: 'manga',
-      url: '/manga',
-      templateUrl: 'views/manga.html',
-      controller: 'mangaController as vm'
+      name: 'upcoming',
+      url: '/upcoming',
+      templateUrl: 'views/upcoming.html',
+      controller: 'upcomingController as vm'
     })
 
     $urlRouterProvider.when('', '/');

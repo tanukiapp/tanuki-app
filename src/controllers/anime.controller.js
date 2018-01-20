@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('animeController', [])
-  .controller('animeController', ['Services', function(Services) {
+angular.module('airingController', [])
+  .controller('airingController', ['Services', '$translate', function(Services, $translate) {
 
     const vm = this
 
@@ -9,6 +9,7 @@ angular.module('animeController', [])
     vm.ready = false
     
     const weekMap = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+
     const animeWeek = {
         'monday': [],
         'tuesday': [],

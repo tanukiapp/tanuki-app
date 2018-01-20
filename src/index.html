@@ -1,133 +1,138 @@
 <!DOCTYPE html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta og:image content="https://image.flaticon.com/icons/svg/235/235394.svg">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta og:image content="https://image.flaticon.com/icons/svg/235/235394.svg">
 
-    <title>Tanuki - Anime Calendar</title>
+        <title>Tanuki - Anime Calendar</title>
 
-    <!-- styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-    <!-- <link rel="stylesheet" href="css/app.min.css"> -->
-    <link rel="stylesheet" href="css/quickfix.css">
-    <link rel="icon" type="image/ico" href="/favicon.ico"/>
+        <!-- styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        <!-- <link rel="stylesheet" href="css/app.min.css"> -->
+        <link rel="stylesheet" href="css/quickfix.css">
+        <link rel="icon" type="image/ico" href="/favicon.ico"/>
 
-    <!-- dependencies here -->
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="lib/angular-spinner/dist/angular-spinner.min.js"></script>
-    <script src="lib/angular-translate/dist/angular-translate.min.js"></script>
+        <!-- dependencies here -->
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="lib/angular-spinner/dist/angular-spinner.min.js"></script>
+        <script src="lib/angular-translate/dist/angular-translate.min.js"></script>
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
 
-    <script src="locales/en.js"></script>
-    <script src="locales/es.js"></script>
+        <script src="locales/en.js"></script>
+        <script src="locales/es.js"></script>
 
-    <!-- main -->
-    <script src="app.js"></script>
-    
-    <!-- components -->
-    <script src="controllers/anime.controller.js"></script>
-    <script src="controllers/manga.controller.js"></script>
-    <script src="directives/components.js"></script>
-    <script src="services/services.js"></script>
-  </head>
+        <!-- main -->
+        <script src="app.js"></script>
 
-  <body ng-app="app">
-    <section class="hero" id="header">
-        <div class="hero-body">
-            <div class="container is-mobile">
-                <a href="/">
-                    <img src="https://image.flaticon.com/icons/svg/235/235394.svg" width="50em" align="left" style="margin-right: 1em;" />
-                    <h1 class="title">Tanuki</h1>
-                </a>
-                <nav class="navbar" role="navigation" aria-label="main navigation">
-                    <nav class="navbar is-transparent">
-                        <div class="navbar-brand">
-                            <a class="navbar-item" href="/">
-                            </a>
-                            <div class="navbar-burger burger" data-target="navbar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            </div>
-                        </div>
-                        
-                        <div id="navbar" class="navbar-menu">
-                            <div class="navbar-start">
-                                <a class="navbar-item white" href="/">
-                                    {{ 'HOME' | translate }}
+        <!-- components -->
+        <script src="controllers/anime.controller.js"></script>
+        <script src="controllers/manga.controller.js"></script>
+        <script src="directives/components.js"></script>
+        <script src="services/services.js"></script>
+    </head>
+
+    <body ng-app="app">
+        <section class="hero" id="header">
+            <div class="hero-body">
+                <div class="container is-mobile">
+                    <a href="/">
+                        <img src="https://image.flaticon.com/icons/svg/235/235394.svg" width="50em" align="left" style="margin-right: 1em;" />
+                        <h1 class="title">Tanuki</h1>
+                    </a>
+                    <nav class="navbar" role="navigation" aria-label="main navigation">
+                        <nav class="navbar is-transparent">
+                            <div class="navbar-brand">
+                                <a class="navbar-item" ui-sref="home">
                                 </a>
-                                <div class="navbar-item has-dropdown is-hoverable">
-                                        <a class="navbar-link white" ui-sref="home">
-                                            {{ 'SCHEDULES' | translate }}
+                                <div class="navbar-burger burger" data-target="navbar">
+                                    <span class="nav-toggle" onclick="toggleMenu()"></span>
+                                    <span class="nav-toggle" onclick="toggleMenu()"></span>
+                                    <span class="nav-toggle" onclick="toggleMenu()"></span>
+                                </div>
+                            </div>
+                            
+                            <div id="navbar" class="navbar-menu main-menu">
+                                <div class="navbar-start">
+                                    <a class="navbar-item white" ui-sref="home" onclick="toggleMenu()">
+                                        {{ 'HOME' | translate }}
+                                    </a>
+                                    <div class="navbar-item has-dropdown is-hoverable">
+                                            <a class="navbar-link white">
+                                                {{ 'SCHEDULES' | translate }}
+                                            </a>
+                                            <div class="navbar-dropdown is-boxed">
+                                                <a class="navbar-item" ui-sref="airing" onclick="toggleMenu()">
+                                                    {{ 'AIRING' | translate }}
+                                                </a>
+                                                <a class="navbar-item" ui-sref="upcoming" onclick="toggleMenu()">
+                                                    {{ 'UPCOMING' | translate }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <div class="navbar-item has-dropdown is-hoverable">
+                                        <a class="navbar-link white">
+                                            {{ 'CONTRIBUTE' | translate }}
                                         </a>
                                         <div class="navbar-dropdown is-boxed">
-                                            <a class="navbar-item" ui-sref="anime">
-                                                {{ 'ANIME' | translate }}
+                                            <a class="navbar-item" href="https://www.patreon.com/wilus" target="_blank" onclick="toggleMenu()">
+                                                {{ 'DONATE' | translate }}
                                             </a>
-                                            <a class="navbar-item" ui-sref="manga">
-                                                {{ 'MANGA' | translate }}
+                                            <a class="navbar-item" href="https://github.com/JuanjoSalvador/tanuki/issues?q=is%3Aissue+is%3Aopen+label%3Abug" target="_blank" onclick="toggleMenu()">
+                                                {{ 'REPORT' | translate }}
+                                            </a>
+                                            <a class="navbar-item" href="https://github.com/JuanjoSalvador/tanuki/issues?q=is%3Aissue+label%3Afeatures" target="_blank" onclick="toggleMenu()">
+                                                {{ 'SUBMIT' | translate }}
                                             </a>
                                         </div>
                                     </div>
-                                <div class="navbar-item has-dropdown is-hoverable">
-                                    <a class="navbar-link white" href="#">
-                                        {{ 'CONTRIBUTE' | translate }}
-                                    </a>
-                                    <div class="navbar-dropdown is-boxed">
-                                        <a class="navbar-item" href="https://www.patreon.com/wilus" target="_blank">
-                                            {{ 'DONATE' | translate }}
-                                        </a>
-                                        <a class="navbar-item" href="https://github.com/JuanjoSalvador/tanuki/issues?q=is%3Aissue+is%3Aopen+label%3Abug" target="_blank">
-                                            {{ 'REPORT' | translate }}
-                                        </a>
-                                        <a class="navbar-item" href="https://github.com/JuanjoSalvador/tanuki/issues?q=is%3Aissue+label%3Afeatures" target="_blank">
-                                            {{ 'SUBMIT' | translate }}
-                                        </a>
-                                    </div>
                                 </div>
+                            
+                                <div class="navbar-end"></div>
                             </div>
-                        
-                            <div class="navbar-end"></div>
-                        </div>
+                        </nav>
                     </nav>
-                </nav>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section" id="content">
-        <ui-view></ui-view>
-    </section>
-      
-    <footer class="footer">
-        <div class="container">
-            <div class="content has-text-centered">
-                    <p>
-                        <a href="http://github.com/JuanjoSalvador/tanuki">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="http://twitter.com/Linuxneitor">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.patreon.com/wilus">
-                            <i class="fab fa-patreon"></i>
-                        </a>
-                    </p>
-                    <p>
-                        Created by <a href="http://juanjosalvador.me">Juanjo Salvador</a>. Powered by <a href="https://kitsu.io">Kitsu</a>.
-                    </p>
-                    <p>
-                        Icons by <a href="http://www.freepik.com" title="Freepik">Freepik</a> 
-                        from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.com</a> 
-                        wih license <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.
-                    </p>
+        <section class="section" id="content">
+            <ui-view></ui-view>
+        </section>
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                        <p>
+                            <a href="http://github.com/JuanjoSalvador/tanuki">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="http://twitter.com/Linuxneitor">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.patreon.com/wilus">
+                                <i class="fab fa-patreon"></i>
+                            </a>
+                        </p>
+                        <p>
+                            Created by <a href="http://juanjosalvador.me">Juanjo Salvador</a>. Powered by <a href="https://kitsu.io">Kitsu</a>.
+                            Icons by <a href="http://www.freepik.com" title="Freepik">Freepik</a> 
+                            from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.com</a> 
+                            with license <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.
+                        </p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     </body>
+    <script>
+        function toggleMenu() {
+            if (screen.width < 768) {
+                document.querySelector('.main-menu').classList.toggle('is-active');
+            }
+        }
+    </script>
 </html>

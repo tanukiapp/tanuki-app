@@ -54,6 +54,8 @@ h3 {
     box-shadow: 0 2px 3px rgba(black, 0.4), 0 0 0 1px rgba(black, 0.4);
 }
 
-.white {
-    color: white !important;
+@media screen and (min-width: 700px) {
+    .white {
+        color: white !important;
+    }
 }

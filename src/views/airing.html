@@ -5,16 +5,23 @@
         </div>
     </div>
     <div class="columns" ng-if="vm.ready">
-        <div class="column is-full">
-            <h5 class="title is-5">
-                {{ 'THIS_WEEK_MANGA' | translate }} ({{ vm.weekStart | date: "dd/MM/yyyy" }} - {{ vm.weekEnd | date: "dd/MM/yyyy" }})
-            </h5>
+        <div class="column is-centered">
+            <h3 class="title is-3">
+                {{ 'THIS_WEEK_ANIME' | translate }}
+            </h3>
+        </div>
+    </div>
+    <div class="columns" ng-if="vm.ready">
+        <div class="column">
+            <h3 class="subtitle is-5">
+                {{ vm.weekStart | date: "dd/MM/yyyy" }} - {{ vm.weekEnd | date: "dd/MM/yyyy" }}
+            </h3>
         </div>
     </div>
         
     <div class="columns" ng-if="vm.ready">
         <div class="column is-centered" ng-repeat="day in vm.week">
-            <h3 class="ng-class: { today: vm.today == $index + 1 }"><strong>{{ day | capitalize }}</strong></h3>
+            <h3 class="ng-class: { today: vm.today == $index + 1 }"><strong>{{ day | translate }}</strong></h3>
             <div ng-repeat="anime in vm.animeWeek | dayFilter: day">
                 <div class="tanuki-box">
                     <!-- <img ng-src="{{ anime.posterImage.tiny }}" /> -->

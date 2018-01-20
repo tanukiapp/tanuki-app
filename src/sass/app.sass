@@ -3,39 +3,32 @@ $orange: #f75239;
 $dark-orange: #f72909;
 $primary: #16a085;
 
-html {
+html 
     background-color: #f7f7f7;
-}
 
-body {
+body 
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-}
 
-h3 {
+h3 
     text-align: center;
 
-    &.today {
+    &.today 
         background-color: $primary;
         color: white;
         border-radius: 0.3em;
 
-        .ng-binding {
+        .ng-binding 
             color: white;
-        }
-    }
-}
-
-#header {
+        
+#header 
     background-color: $kitsu;
-
-    .title, .subtitle {
+    
+    .title, .subtitle 
         color: white !important;
-    }
-}
 
-.tanuki-box {
+.tanuki-box 
     text-align: center;
     border: 1px solid lightgray;
     border-radius: 0.3em;
@@ -44,26 +37,21 @@ h3 {
     margin-top: 0.3em;
     background-color: white;
 
-    img {
+    img 
         border: 1px solid lightgray;
         border-radius: 0.3em;
-    }
 
-    .anime-title {
+    .anime-title 
         color: $orange;
         font-size: 16px;
         font-weight: 700;
     
-        :hover {
+        :hover 
             color: $dark-orange;
-        }
-    }
-}
 
-.column {
-    word-wrap: break-word !important;    
-}
+.column 
+    word-wrap: break-word !important;
 
-.white {
-    color: white !important;
-}
+@media (min-width: 760px)
+    .white 
+        color: white !important;
