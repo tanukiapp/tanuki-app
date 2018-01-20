@@ -25,7 +25,7 @@
                         <div class="media-content">
                             <div class="content" style="min-height: 12vh;">
                                 <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index].attributes.slug }}">
-                                    <h4>{{ vm.upcoming[$index].attributes.canonicalTitle }}</h4>
+                                    <h4 class="anime-title">{{ vm.upcoming[$index].attributes.canonicalTitle }}</h4>
                                 </a>
                             </div>
                             <nav class="level is-mobile">
@@ -53,7 +53,7 @@
                         <div class="media-content">
                             <div class="content" style="min-height: 12vh;">
                                 <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index + 1].attributes.slug }}">
-                                    <h4>{{ vm.upcoming[$index + 1].attributes.canonicalTitle }}</h4>
+                                    <h4 class="anime-title">{{ vm.upcoming[$index + 1].attributes.canonicalTitle }}</h4>
                                 </a>
                             </div>
                             <nav class="level is-mobile">
@@ -81,7 +81,7 @@
                         <div class="media-content">
                             <div class="content" style="min-height: 12vh;">
                                 <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index + 2].attributes.slug }}">
-                                    <h4>{{ vm.upcoming[$index + 2].attributes.canonicalTitle }}</h4>
+                                    <h4 class="anime-title">{{ vm.upcoming[$index + 2].attributes.canonicalTitle }}</h4>
                                 </a>
                             </div>
                             <nav class="level is-mobile">
