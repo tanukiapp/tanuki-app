@@ -1,8 +1,18 @@
 'use strict';
 
-angular.module('app', ['mangaController', 'animeController', 'app.services', 'app.components', 'ui.router', 'angularSpinner'])
+angular.module('app', ['mangaController', 'animeController', 'app.services', 'app.components', 'ui.router', 'angularSpinner', 'pascalprecht.translate'])
 
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', '$translateProvider', function($stateProvider, $urlRouterProvider, $translateProvider) {
+  $translateProvider
+    .translations('en', LOCALE_EN)
+    .translations('es', LOCALE_ES)
+    .registerAvailableLanguageKeys(['en', 'es'], {
+      'en_*': 'en',
+      'es_*': 'es'
+    })
+    .determinePreferredLanguage()
+    .useSanitizeValueStrategy('escape')
+
   $stateProvider
     .state({
       name: 'home',
