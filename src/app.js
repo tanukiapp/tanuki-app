@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['app.controllers', 'app.services', 'app.components', 'ui.router'])
+angular.module('app', ['mangaController', 'animeController', 'app.services', 'app.components', 'ui.router', 'angularSpinner'])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -8,7 +8,21 @@ angular.module('app', ['app.controllers', 'app.services', 'app.components', 'ui.
       name: 'home',
       url: '/',
       templateUrl: 'views/home.html',
-      controller: 'appCtrl as vm'
+      //controller: 'animeController as vm'
+    })
+
+    .state({
+      name: 'anime',
+      url: '/anime',
+      templateUrl: 'views/anime.html',
+      controller: 'animeController as vm'
+    })
+
+    .state({
+      name: 'manga',
+      url: '/manga',
+      templateUrl: 'views/manga.html',
+      controller: 'mangaController as vm'
     })
 
     $urlRouterProvider.when('', '/');

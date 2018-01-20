@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "gulp && node server.js"
+    "build": "gulp && node server.js",
+    "serve": "node server.js"
   },
   "author": "Juanjo Salvador <juanjosalvador@netc.eu> (http://juanjosalvador.es)",
   "license": "MIT",

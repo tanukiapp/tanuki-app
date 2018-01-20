@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('app.controllers', [])
-  .controller('appCtrl', ['Services', function(Services) {
+angular.module('mangaController', [])
+  .controller('mangaController', ['Services', function(Services) {
 
     const vm = this
 
@@ -20,8 +20,9 @@ angular.module('app.controllers', [])
     }
 
     const assignWeek = (date, anime) => {
-      let day = (new Date(date).getDay())
+      let day = moment(date).day()
 
+      // this adjust the weekMap array
       if (day != 0) {
         day -= 1
       } else {
@@ -40,12 +41,12 @@ angular.module('app.controllers', [])
     vm.weekStart = new Date(curr.setDate(first)).getTime()
     vm.weekEnd   = new Date(curr.setDate(last)).getTime()
     
-    vm.get = (province) => {
-      Services.getAnime()
+    vm.get = () => {
+      Services.getManga()
         .then((res) => {
-          let anime_json = []
-          res.data.data.map((e) => anime_json.push(e.attributes))
-          anime_json.map((e) => assignWeek(e.startDate, e))
+          let manga_json = []
+          res.data.data.map((e) => manga_json.push(e.attributes))
+          manga_json.map((e) => assignWeek(e.startDate, e))
           
           vm.week = weekMap
           vm.animeWeek = animeWeek

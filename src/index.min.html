@@ -8,27 +8,81 @@
 
     <title>Tanuki - Anime Calendar</title>
 
-    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/angular-spinner/dist/angular-spinner.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <link rel="stylesheet" href="css/app.min.css">
     <link rel="icon" type="image/ico" href="/favicon.ico"/>
+    
     <script src="app.min.js"></script>
   </head>
 
   <body ng-app="app">
-    <section class="section" id="header">
-        <div class="container is-mobile">
-            <img src="https://image.flaticon.com/icons/svg/235/235394.svg" width="50em" align="left" style="margin-right: 1em;" />
-            <h1 class="title">Tanuki</h1>
-            <h2 class="subtitle">Anime calendar for Kitsu</h2>
-            <!-- <div class="columns is-mobile">
-                <div class="column is-9"></div>
-                <div class="column is-3" style="text-align: right">
-                    <button class="button is-primary">Login</button>
-                </div>
-            </div> -->
+    <section class="hero" id="header">
+        <div class="hero-body">
+            <div class="container is-mobile">
+                <a href="/">
+                    <img src="https://image.flaticon.com/icons/svg/235/235394.svg" width="50em" align="left" style="margin-right: 1em;" />
+                    <h1 class="title">Tanuki</h1>
+                    <h2 class="subtitle">Anime schedule for Kitsu</h2>
+                </a>
+                <nav class="navbar" role="navigation" aria-label="main navigation">
+                    <nav class="navbar is-transparent">
+                        <div class="navbar-brand">
+                            <a class="navbar-item" href="/">
+                            </a>
+                            <div class="navbar-burger burger" data-target="navbar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            </div>
+                        </div>
+                        
+                        <div id="navbar" class="navbar-menu">
+                            <div class="navbar-start">
+                                <a class="navbar-item white" href="/">
+                                    Home
+                                </a>
+                                <div class="navbar-item has-dropdown is-hoverable">
+                                    <a class="navbar-link white" ui-sref="home">
+                                        Schedules
+                                    </a>
+                                    <div class="navbar-dropdown is-boxed">
+                                        <a class="navbar-item" ui-sref="anime">
+                                            Anime
+                                        </a>
+                                        <a class="navbar-item" ui-sref="manga">
+                                            Manga
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="navbar-item has-dropdown is-hoverable">
+                                    <a class="navbar-link white" href="#">
+                                        Contribute
+                                    </a>
+                                    <div class="navbar-dropdown is-boxed">
+                                        <a class="navbar-item" href="https://www.patreon.com/wilus" target="_blank">
+                                            Donate
+                                        </a>
+                                        <a class="navbar-item" href="https://github.com/JuanjoSalvador/tanuki/issues?q=is%3Aissue+is%3Aopen+label%3Abug" target="_blank">
+                                            Report a bug
+                                        </a>
+                                        <a class="navbar-item" href="https://github.com/JuanjoSalvador/tanuki/issues?q=is%3Aissue+label%3Afeatures" target="_blank">
+                                            Submit a feature
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="navbar-end"></div>
+                        </div>
+                    </nav>
+                </nav>
+            </div>
         </div>
     </section>
 

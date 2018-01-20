@@ -8,7 +8,7 @@ const htmlmin = require('gulp-htmlmin')
 
 // Build JS
 gulp.task('build', () =>
-    gulp.src('src/**/*.js')
+    gulp.src(['src/controllers/*.js', 'src/directives/*.js', 'src/services/*.js', 'src/app.js'])
         .pipe(babel({
             presets: ['es2015']
         }))
@@ -43,12 +43,7 @@ gulp.task('copy', () => {
     gulp.src(['src/favicon.ico'])
         .pipe(gulp.dest('dist'))
 
-    gulp.src('src/lib/**/*').pipe(gulp.dest('dist/lib'))
+    gulp.src('src/lib/**/*.min.js').pipe(gulp.dest('dist/lib'))
 })
-
-gulp.task('watch', function() {
-    livereload.listen();
-    gulp.watch('src/sass/*.scss', ['sass']);
-});
 
 gulp.task('default', ['build', 'html', 'sass', 'copy'], () => {})
