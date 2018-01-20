@@ -1,2 +1,2 @@
-tanuki-app/node_modules/
-tanuki-server/node_modules/
+node_modules/
+dist/
