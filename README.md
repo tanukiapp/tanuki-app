@@ -1,6 +1,6 @@
-<center>
+<p align="center">
     <img src="https://image.flaticon.com/icons/svg/235/235394.svg" width="250" />
-</center>
+</p>
 
 # Tanuki
 ### Anime schedule for Kitsu
