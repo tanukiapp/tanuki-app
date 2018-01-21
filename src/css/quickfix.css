@@ -49,7 +49,6 @@ h3 {
 
 .today {
     background-color: #16a085;
-    color: white;
     border-radius: 0.3em;
     box-shadow: 0 2px 3px rgba(black, 0.4), 0 0 0 1px rgba(black, 0.4);
 }
@@ -58,4 +57,8 @@ h3 {
     .white {
         color: white !important;
     }
+}
+
+h3.today strong {
+    color: white !important;
 }

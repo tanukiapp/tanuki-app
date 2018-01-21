@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('upcomingController', [])
-  .controller('upcomingController', ['Services', function(Services) {
+  .controller('upcomingController', ['AnimeService', function(AnimeService) {
 
     const vm = this
 
@@ -9,7 +9,7 @@ angular.module('upcomingController', [])
     vm.ready = false
     
     vm.get = () => {
-      Services.upcoming()
+      AnimeService.upcoming()
         .then((res) => {          
           vm.upcoming = res.data.data
           vm.ready = true

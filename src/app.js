@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['airingController', 'upcomingController', 'app.services', 'app.components', 'ui.router', 'angularSpinner', 'pascalprecht.translate'])
+angular.module('app', ['airingController', 'upcomingController', 'AnimeService', 'app.components', 'ui.router', 'angularSpinner', 'pascalprecht.translate'])
 
 .config(['$stateProvider', '$urlRouterProvider', '$translateProvider', function($stateProvider, $urlRouterProvider, $translateProvider) {
   $translateProvider
