@@ -58,9 +58,27 @@ h4
         :hover 
             color: $dark-orange;
 
+.tanuki-box-column
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 0.3em;
+    padding: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    background-color: white;
+
+    p
+        margin-bottom: 1em;
+        min-height: 5vh;
+
 .column 
     word-wrap: break-word !important;
 
 @media (min-width: 760px)
     .white 
         color: white !important;
+
+@media (min-width: 360px)
+    .tanuki-box-column
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;

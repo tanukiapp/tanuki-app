@@ -32,6 +32,7 @@
         <!-- components -->
         <script src="controllers/anime.controller.js"></script>
         <script src="controllers/upcoming.controller.js"></script>
+        <script src="controllers/donate.controller.js"></script>
         <script src="directives/components.js"></script>
         <script src="services/anime.service.js"></script>
     </head>
@@ -79,8 +80,8 @@
                                             {{ 'CONTRIBUTE' | translate }}
                                         </a>
                                         <div class="navbar-dropdown is-boxed">
-                                            <a class="navbar-item" href="https://www.patreon.com/wilus" target="_blank" onclick="toggleMenu()">
-                                                {{ 'DONATE' | translate }}
+                                            <a class="navbar-item" ui-sref="donate" onclick="toggleMenu()">
+                                                {{ 'DONATIONS' | translate }}
                                             </a>
                                             <a class="navbar-item" href="https://github.com/JuanjoSalvador/tanuki/issues?q=is%3Aissue+is%3Aopen+label%3Abug" target="_blank" onclick="toggleMenu()">
                                                 {{ 'REPORT' | translate }}

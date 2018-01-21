@@ -35,5 +35,13 @@ angular.module('app', ['airingController', 'upcomingController', 'AnimeService',
       controller: 'upcomingController as vm'
     })
 
+    .state({
+      name: 'donate',
+      url: '/donate',
+      templateUrl: 'views/donate.html',
+      //controller: 'donateController as vm'
+    })
+
+
     $urlRouterProvider.when('', '/');
 }])
