@@ -6,7 +6,16 @@ angular.module('airingController', [])
     const vm = this
 
     let today = new Date().getDay()
-    today == 0 ? vm.today = 6 : vm.today = today + 1
+
+    if (today == 0) {
+      vm.today = 6
+    } else if (today == 1) {
+      vm.today = 0
+    } else {
+      vm.today = today++
+    } 
+
+    console.log(today, vm.today)
 
     vm.ready = false
     
