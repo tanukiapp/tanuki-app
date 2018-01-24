@@ -4,6 +4,16 @@ html {
     background-color: #f7f7f7;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#content {
+    flex: 1;
+}
+
 #header {
     background-color: rgb(64,47,63);
 }
@@ -23,14 +33,41 @@ h3 {
     padding: 0.3em;
     margin-bottom: 0.3em;
     margin-top: 0.3em;
-    box-shadow: 0 2px 3px rgba(black, 0.4), 0 0 0 1px rgba(black, 0.4);
     background-color: white;
+}
+
+.tanuki-box-column {
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 0.3em;
+    padding: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    background-color: white;
+}
+
+@media screen and (min-width: 360px) {
+    .tanuki-box-column {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+}
+.tanuki-box-column p {
+    margin-bottom: 1em;
+    min-height: 5vh;
 }
 
 .tanuki-box img {
     border: 1px solid lightgray;
     border-radius: 0.3em;
-    box-shadow: 0 2px 3px rgba(black, 0.4), 0 0 0 1px rgba(black, 0.4);
+}
+
+.tanuki-box a.anime-title img {
+    display: none;
+}
+
+.tanuki-box:hover > a.anime-title > img {
+    display: initial;
 }
 
 .column {
@@ -49,11 +86,29 @@ h3 {
 
 .today {
     background-color: #16a085;
-    color: white;
     border-radius: 0.3em;
     box-shadow: 0 2px 3px rgba(black, 0.4), 0 0 0 1px rgba(black, 0.4);
 }
 
-.loading {
-    height: 100%;
+@media screen and (min-width: 700px) {
+    .white {
+        color: white !important;
+    }
+}
+
+h3.today strong {
+    color: white !important;
+}
+
+footer > div > div {
+    position: relative;
+    bottom: -6vh;
+}
+
+.tanuki-box > span.score {
+    display: none;
+}
+
+.tanuki-box:hover > span.score {
+    display: initial;
 }
