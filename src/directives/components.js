@@ -12,3 +12,15 @@ angular.module('app.components', [])
           return (!!input) ? input.replace(reg, (txt) => {return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()}) : '';
         }
     })
+
+    .directive('tanukiHeader', () => {
+        return {
+            templateUrl: 'views/components/header.html'
+        }
+    })
+
+    .directive('tanukiFooter', () => {
+        return {
+            templateUrl: 'views/components/footer.html'
+        }
+    })

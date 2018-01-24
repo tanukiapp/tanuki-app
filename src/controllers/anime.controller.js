@@ -9,13 +9,9 @@ angular.module('airingController', [])
 
     if (today == 0) {
       vm.today = 6
-    } else if (today == 1) {
-      vm.today = 0
     } else {
-      vm.today = today++
+      vm.today = today - 1
     } 
-
-    console.log(today, vm.today)
 
     vm.ready = false
     
@@ -30,7 +26,7 @@ angular.module('airingController', [])
     
     vm.get = () => {
       AnimeService.airing()
-        .then((res) => {  
+        .then((res) => {
           vm.week = weekMap
           vm.animeWeek = res.data
           vm.ready = true

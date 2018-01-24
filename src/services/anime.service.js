@@ -7,4 +7,8 @@ angular.module('AnimeService', [])
     this.upcoming = () => {
       return $http.get('http://localhost:8080/upcoming')
     }
+
+    this.upcomingBySeason = (season) => {
+      return $http.get('http://localhost:8080/upcoming/' + season)
+    }
   }])

@@ -24,10 +24,15 @@
             <h3 class="ng-class: { today: vm.today == $index }"><strong>{{ day | translate }}</strong></h3>
             <div ng-repeat="anime in vm.animeWeek | dayFilter: day">
                 <div class="tanuki-box">
-                    <!-- <img ng-src="{{ anime.posterImage.tiny }}" /> -->
                     <a ng-href="https://kitsu.io/anime/{{anime.slug}}" target="_blank" class="anime-title">
+                        <img ng-src="{{ anime.posterImage.tiny }}"  class="anime-poster" />
                         <div>{{ anime.canonicalTitle }}</div>
                     </a>
+                    <span class="score">
+                        <i class="fas fa-heart" style="color: red" ng-if="anime.popularityRank"></i> #{{ anime.popularityRank }}
+                        <i class="fas fa-star" style="color: #cccc00" ng-if="anime.ratingRank"></i> #{{ anime.ratingRank }}
+                    </span>
+                    <div class="tag is-info is-rounded" ng-if="anime.status == 'upcoming'">New release!</div>
                     <!-- <span class="info">Ep 4</span> -->
                 </div>
             </div>

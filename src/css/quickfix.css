@@ -4,6 +4,16 @@ html {
     background-color: #f7f7f7;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#content {
+    flex: 1;
+}
+
 #header {
     background-color: rgb(64,47,63);
 }
@@ -52,6 +62,14 @@ h3 {
     border-radius: 0.3em;
 }
 
+.tanuki-box a.anime-title img {
+    display: none;
+}
+
+.tanuki-box:hover > a.anime-title > img {
+    display: initial;
+}
+
 .column {
     word-wrap: break-word !important;    
 }
@@ -80,4 +98,17 @@ h3 {
 
 h3.today strong {
     color: white !important;
+}
+
+footer > div > div {
+    position: relative;
+    bottom: -6vh;
+}
+
+.tanuki-box > span.score {
+    display: none;
+}
+
+.tanuki-box:hover > span.score {
+    display: initial;
 }

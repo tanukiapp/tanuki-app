@@ -4,37 +4,54 @@
             <span us-spinner></span>
         </div>
     </div>
-    <div class="columns" ng-if="vm.ready">
+
+    <div class="columns is-mobile" ng-if="vm.ready">
         <div class="column is-full">
             <h3 class="title is-3">
                 {{ 'UPCOMING' | translate }}
-            </h4>
+            </h3>
+        </div>
+    </div>
+ 
+    <div class="columns is-mobile is-centered" ng-if="vm.ready">
+        <div class="column is-narrow">
+            <button class="button is-primary" ng-click="vm.get()">All</button>
+            <button class="button is-primary" ng-click="vm.getSeason('winter')">Winter</button>
+            <button class="button is-primary" ng-click="vm.getSeason('spring')">Spring</button>
+            <button class="button is-primary" ng-click="vm.getSeason('summer')">Summer</button>
+            <button class="button is-primary" ng-click="vm.getSeason('fall')">Fall</button>
         </div>
     </div>
         
     <div ng-repeat="a in vm.upcoming track by $index" ng-if="vm.ready">
         <div class="columns" ng-if="$index % 3 == 0">
-            <div class="column">
-                <div class="box" ng-hide="vm.upcoming[$index].attributes.titles == null">
+            <div class="column is-mobile">
+                <div class="box" ng-hide="vm.upcoming[$index].titles == null">
                     <article class="media">
                         <div class="media-left">
                             <figure class="image is-16x32">
-                                <img ng-src="{{ vm.upcoming[$index].attributes.posterImage.tiny }}"  />
+                                <img ng-src="{{ vm.upcoming[$index].posterImage.tiny }}" />
                             </figure>
                         </div>
                         <div class="media-content">
-                            <div class="content" style="min-height: 12vh;">
-                                <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index].attributes.slug }}">
-                                    <h4 class="anime-title">{{ vm.upcoming[$index].attributes.canonicalTitle }}</h4>
+                            <div class="content">
+                                <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index].slug }}">
+                                    <h4 class="anime-title">{{ vm.upcoming[$index].canonicalTitle }}</h4>
                                 </a>
+                                <p>
+                                    {{ vm.upcoming[$index].synopsis | limitTo: 150 }}
+                                    <span ng-if="vm.upcoming[$index].synopsis.length > 150">
+                                        ... <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index].slug }}" class="anime-title">Read more</a>
+                                    </span>
+                                </p>
                             </div>
                             <nav class="level is-mobile">
                                 <div class="level-left">
                                     <div class="level-item">
                                         <span class="tag is-info" style="margin-right: 0.3em" style="margin-right: 0.3em">
-                                            {{ vm.upcoming[$index].attributes.subtype | capitalize }}
+                                            {{ vm.upcoming[$index].subtype | uppercase }}
                                         </span> 
-                                        {{ vm.upcoming[$index].attributes.startDate | date }}
+                                        {{ vm.upcoming[$index].startDate | date }}
                                     </div>
                                 </div>
                             </nav>
@@ -42,27 +59,33 @@
                     </article>
                 </div>
             </div>
-            <div class="column">
-                <div class="box" ng-hide="vm.upcoming[$index + 1].attributes.titles == null">
+            <div class="column is-mobile">
+                <div class="box" ng-hide="vm.upcoming[$index + 1].titles == null">
                     <article class="media">
                         <div class="media-left">
                             <figure class="image is-16x32">
-                                <img ng-src="{{ vm.upcoming[$index + 1].attributes.posterImage.tiny }}"  />
+                                <img ng-src="{{ vm.upcoming[$index + 1].posterImage.tiny }}"  />
                             </figure>
                         </div>
                         <div class="media-content">
-                            <div class="content" style="min-height: 12vh;">
-                                <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index + 1].attributes.slug }}">
-                                    <h4 class="anime-title">{{ vm.upcoming[$index + 1].attributes.canonicalTitle }}</h4>
+                            <div class="content">
+                                <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index + 1].slug }}">
+                                    <h4 class="anime-title">{{ vm.upcoming[$index + 1].canonicalTitle }}</h4>
                                 </a>
+                                <p>
+                                    {{ vm.upcoming[$index + 1].synopsis | limitTo: 150 }}
+                                    <span ng-if="vm.upcoming[$index + 1].synopsis.length > 150">
+                                        ... <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index + 1].slug }}" class="anime-title">Read more</a>
+                                    </span>
+                                </p>
                             </div>
                             <nav class="level is-mobile">
                                 <div class="level-left">
                                     <div class="level-item">
                                         <span class="tag is-info" style="margin-right: 0.3em" style="margin-right: 0.3em">
-                                            {{ vm.upcoming[$index + 1].attributes.subtype | capitalize }}
+                                            {{ vm.upcoming[$index + 1].subtype | uppercase }}
                                         </span> 
-                                        {{ vm.upcoming[$index + 1].attributes.startDate | date }}
+                                        {{ vm.upcoming[$index + 1].startDate | date }}
                                     </div>
                                 </div>
                             </nav>
@@ -70,27 +93,33 @@
                     </article>
                 </div>
             </div>
-            <div class="column">
-                <div class="box" ng-hide="vm.upcoming[$index + 2].attributes.titles == null">
+            <div class="column is-mobile">
+                <div class="box" ng-hide="vm.upcoming[$index + 2].titles == null">
                     <article class="media">
                         <div class="media-left">
                             <figure class="image is-16x32">
-                                <img ng-src="{{ vm.upcoming[$index + 2].attributes.posterImage.tiny }}"  />
+                                <img ng-src="{{ vm.upcoming[$index + 2].posterImage.tiny }}"  />
                             </figure>
                         </div>
                         <div class="media-content">
-                            <div class="content" style="min-height: 12vh;">
-                                <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index + 2].attributes.slug }}">
-                                    <h4 class="anime-title">{{ vm.upcoming[$index + 2].attributes.canonicalTitle }}</h4>
+                            <div class="content">
+                                <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index + 2].slug }}">
+                                    <h4 class="anime-title">{{ vm.upcoming[$index + 2].canonicalTitle }}</h4>
                                 </a>
+                                <p>
+                                    {{ vm.upcoming[$index + 2].synopsis | limitTo: 150 }}
+                                    <span ng-if="vm.upcoming[$index + 2].synopsis.length > 150">
+                                        ... <a ng-href="https://kitsu.io/anime/{{ vm.upcoming[$index + 2].slug }}" class="anime-title">Read more</a>
+                                    </span>
+                                </p>
                             </div>
                             <nav class="level is-mobile">
                                 <div class="level-left">
                                     <div class="level-item">
                                         <span class="tag is-info" style="margin-right: 0.3em" style="margin-right: 0.3em">
-                                            {{ vm.upcoming[$index + 2].attributes.subtype | capitalize }}
+                                            {{ vm.upcoming[$index + 2].subtype | uppercase }}
                                         </span> 
-                                        {{ vm.upcoming[$index + 2].attributes.startDate | date }}
+                                        {{ vm.upcoming[$index + 2].startDate | date }}
                                     </div>
                                 </div>
                             </nav>

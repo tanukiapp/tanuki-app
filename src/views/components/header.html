@@ -1,0 +1,60 @@
+<section class="hero" id="header">
+    <div class="hero-body">
+        <div class="container is-mobile">
+            <a ui-sref="home">
+                <img src="https://image.flaticon.com/icons/svg/235/235394.svg" width="50em" align="left" style="margin-right: 1em;" />
+                <h1 class="title">Tanuki</h1>
+            </a>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <nav class="navbar is-transparent">
+                    <div class="navbar-brand">
+                        <div class="navbar-burger burger" data-target="navbar">
+                            <span class="nav-toggle" onclick="toggleMenu()"></span>
+                            <span class="nav-toggle" onclick="toggleMenu()"></span>
+                            <span class="nav-toggle" onclick="toggleMenu()"></span>
+                        </div>
+                    </div>
+                    
+                    <div id="navbar" class="navbar-menu main-menu">
+                        <div class="navbar-start">
+                            <a class="navbar-item white" ui-sref="home" onclick="toggleMenu()">
+                                {{ 'HOME' | translate }}
+                            </a>
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                    <a class="navbar-link white">
+                                        {{ 'SCHEDULES' | translate }}
+                                    </a>
+                                    <div class="navbar-dropdown is-boxed">
+                                        <a class="navbar-item" ui-sref="airing" onclick="toggleMenu()">
+                                            {{ 'AIRING' | translate }}
+                                        </a>
+                                        <a class="navbar-item" ui-sref="upcoming" onclick="toggleMenu()">
+                                            {{ 'UPCOMING' | translate }}
+                                        </a>
+                                    </div>
+                                </div>
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a class="navbar-link white">
+                                    {{ 'CONTRIBUTE' | translate }}
+                                </a>
+                                <div class="navbar-dropdown is-boxed">
+                                    <a class="navbar-item" ui-sref="donate" onclick="toggleMenu()">
+                                        {{ 'DONATIONS' | translate }}
+                                    </a>
+                                    <a class="navbar-item" href="https://github.com/JuanjoSalvador/tanuki/issues?q=is%3Aissue+is%3Aopen+label%3Abug" target="_blank" onclick="toggleMenu()">
+                                        {{ 'REPORT' | translate }}
+                                    </a>
+                                    <a class="navbar-item" href="https://github.com/JuanjoSalvador/tanuki/issues?q=is%3Aissue+label%3Afeatures" target="_blank" onclick="toggleMenu()">
+                                        {{ 'SUBMIT' | translate }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="navbar-end"></div>
+                    </div>
+                </nav>
+            </nav>
+        </div>
+    </div>
+</section>
