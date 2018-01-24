@@ -31,7 +31,7 @@ gulp.task('sass', () => {
 
 // Minify views
 gulp.task('html', () =>
-    gulp.src('src/views/*.html')
+    gulp.src('src/views/**/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('app/views'))
 )
