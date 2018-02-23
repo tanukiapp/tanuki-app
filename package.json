@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp start",
     "build": "gulp && node server.js",
-    "serve": "node server.dev.js"
+    "serve": "node server.js"
   },
   "author": "Juanjo Salvador <juanjosalvador@netc.eu> (http://juanjosalvador.me)",
   "license": "MIT",

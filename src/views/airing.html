@@ -32,7 +32,7 @@
                         <i class="fas fa-heart" style="color: red" ng-if="anime.popularityRank"></i> #{{ anime.popularityRank }}
                         <i class="fas fa-star" style="color: #cccc00" ng-if="anime.ratingRank"></i> #{{ anime.ratingRank }}
                     </span>
-                    <div class="tag is-info is-rounded" ng-if="anime.status == 'upcoming'">New release!</div>
+                    <div class="tag is-info is-rounded" ng-if="anime.status == 'upcoming'">{{ 'NEW_RELEASE'| translate }}</div>
                     <!-- <span class="info">Ep 4</span> -->
                 </div>
             </div>

@@ -45,6 +45,9 @@ gulp.task('copy', () => {
     
     gulp.src(['src/favicon.ico'])
         .pipe(gulp.dest('app'))
+
+    gulp.src(['src/assets/**'])
+        .pipe(gulp.dest('app/assets'))
 })
 
 gulp.task('bundle', () => {

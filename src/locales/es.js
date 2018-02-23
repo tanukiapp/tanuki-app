@@ -14,6 +14,7 @@ var LOCALE_ES = {
 
     // Schedules
     THIS_WEEK_ANIME: "Emitiendo esta semana",
+    NEW_RELEASE: "¡Nuevo lanzamiento!",
 
     // Donations
     DONATION_TEXT: "Con tus donaciones, puedo mantener vivo Tanuki. Este dinero será usado para pagar el servidor, certificados SSL, y cualquier cosa que necesitemos.",
@@ -34,5 +35,12 @@ var LOCALE_ES = {
     thursday: "Jueves",
     friday: "Viernes",
     saturday: "Sábado",
-    sunday: "Domingo"
+    sunday: "Domingo",
+
+    // Seasons
+
+    WINTER: "Invierno",
+    SUMMER: "Verano",
+    SPRING: "Primavera",
+    FALL: "Final"
 }

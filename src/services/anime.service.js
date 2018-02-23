@@ -1,14 +1,14 @@
 angular.module('AnimeService', [])
   .service('AnimeService', ['$http', function($http) {
     this.airing = () => {
-      return $http.get('http://localhost:8080/anime')
+      return $http.get('https://tanuki-server-ffkecsdciy.now.sh/anime')
     }
 
     this.upcoming = () => {
-      return $http.get('http://localhost:8080/upcoming')
+      return $http.get('https://tanuki-server-ffkecsdciy.now.sh/upcoming')
     }
 
     this.upcomingBySeason = (season) => {
-      return $http.get('http://localhost:8080/upcoming/' + season)
+      return $http.get('https://tanuki-server-ffkecsdciy.now.sh/upcoming/' + season)
     }
   }])
