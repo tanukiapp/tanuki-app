@@ -8,7 +8,7 @@ var LOCALE_EN = {
 
     // Home
     WELCOME: "Welcome to Tanuki",
-    TAGLINE: "An easy way to build your own anime or manga weekly schedule",
+    TAGLINE: "An easy way to build your own anime weekly schedule",
     AIRING:  "Currently airing",
     UPCOMING: "Upcoming shows",
     VIEW_SCHEDULE: "View schedule",

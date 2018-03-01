@@ -8,7 +8,7 @@ var LOCALE_ES = {
 
     // Home
     WELCOME: "Bienvenido a Tanuki",
-    TAGLINE: "Una forma fácil de crear tu propio horario semanal de anime y manga",
+    TAGLINE: "Una forma fácil de crear tu propio horario semanal de anime",
     AIRING: "En emisión",
     UPCOMING: "Próximamente",
     VIEW_SCHEDULE: "Ver horario",
