@@ -1,25 +1,44 @@
-<div class="container is-mobile">       
-    <div class="columns">
-            <div class="column" style="text-align: center">
-                <h3 class="title">{{ 'WELCOME' | translate }}</h3>
-                <h4 class="subtitle">{{ 'TAGLINE' | translate }}</h4>
-                <img src="https://image.flaticon.com/icons/svg/235/235394.svg" width="100em" style="margin-right: 1em;" />
-            </div>
-    </div>
-    <div class="columns">
-        <div class="column" style="text-align: center">
-            <button class="button is-large" ui-sref="airing">
-                <span class="icon is-medium">
-                    <i class="fas fa-tv"></i>
-                </span>
-                <span>{{ 'AIRING' | translate }}</span>
-            </button>
-            <button class="button is-large" ui-sref="upcoming">
-                <span class="icon is-medium">
-                    <i class="far fa-calendar-alt"></i>
-                </span>
-                <span>{{ 'UPCOMING' | translate }}</span>
-            </button>
+<section class="hero is-medium dark-red" id="header">
+    <div class="hero-body">
+        <div class="container is-mobile">
+            <a ui-sref="home">
+                <h1 class="title is-1" style="text-align: center;">
+                    Tanuki
+                </h1>
+
+                <h2 class="subtitle is-3" style="text-align: center;">
+                    {{ 'TAGLINE' | translate }}
+                </h2>
+            </a>
+            
         </div>
     </div>
-</div>
+</section>
+
+<section class="section" id="content">
+    <div class="container is-mobile">       
+        <div class="columns">
+            <div class="column" style="text-align: center">
+                <div class="box">
+                    <span class="icon"><i class="fas fa-tv fa-3x"></i></span>
+                    <h3 class="title is-3">{{ 'AIRING' | translate }}</h3>
+                    <button class="button is-info is-medium" ui-sref="airing">
+                        {{ 'VIEW_SCHEDULE' | translate }}
+                    </button>
+                </div>
+            </div>
+
+            <div class="column" style="text-align: center">
+                <div class="box">
+                    <span class="icon"><i class="fas fa-calendar-alt fa-3x"></i></span>
+                    <h3 class="title is-3">{{ 'UPCOMING' | translate }}</h3>
+                    <button class="button is-info is-medium" ui-sref="upcoming">
+                        {{ 'VIEW_SCHEDULE' | translate }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<tanuki-footer></tanuki-footer>

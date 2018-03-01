@@ -1,42 +1,48 @@
-<div class="container is-mobile">
-    <div class="columns">
-        <div class="column is-centered">
-            <h3 class="title is-3">
-                {{ 'DONATIONS' | translate }}
-            </h3>
-            <p align="center">
-                {{ 'DONATION_TEXT' | translate }}
-            </p>
+<tanuki-header></tanuki-header>
+
+<section class="section" id="content">
+    <div class="container is-mobile">
+        <div class="columns">
+            <div class="column is-centered">
+                <h3 class="title is-3">
+                    {{ 'DONATIONS' | translate }}
+                </h3>
+                <p align="center">
+                    {{ 'DONATION_TEXT' | translate }}
+                </p>
+            </div>
+        </div>
+        
+        <div class="columns">
+            <div class="column is-centered tanuki-box-column">
+                <img src="assets/img/patreon.svg" width="200" />
+                <h3 class="subtitle is-3">Patreon</h3>
+                <p>{{ 'PT_TEXT' | translate }}</p>
+                <br/>
+                <a class="button is-primary" href="https://www.patreon.com/juanjosalvador" target='_blank'>
+                    {{ 'DONATE_PT' | translate }}
+                </a>
+            </div>
+            <div class="column is-centered tanuki-box-column">
+                <img src="assets/img/kofi.png" width="200" />
+                <h3 class="subtitle is-3">Ko-fi.com</h3>
+                <p>{{ 'KF_TEXT' | translate }}</p>
+                <br/>
+                <a class="button is-primary" href="https://ko-fi.com/G2G082CE" target='_blank'>
+                    {{ 'DONATE_KF' | translate }}
+                </a>
+            </div>
+            <div class="column is-centered tanuki-box-column has-text-centered">
+                <img src="assets/img/liberapay.png" />
+                <h3 class="subtitle is-3">Liberapay</h3>
+                <p>{{ 'LP_TEXT' | translate }}</p>
+                <br/>
+                <a class="button is-primary" href="https://liberapay.com/~29917/donate" target='_blank'>
+                    {{ 'DONATE_LP' | translate }}
+                </a>
+            </div>
         </div>
     </div>
-       
-    <div class="columns">
-        <div class="column is-centered tanuki-box-column">
-            <img src="assets/img/patreon.svg" width="200" />
-            <h3 class="subtitle is-3">Patreon</h3>
-            <p>{{ 'PT_TEXT' | translate }}</p>
-            <br/>
-            <a class="button is-primary" href="https://www.patreon.com/juanjosalvador" target='_blank'>
-                {{ 'DONATE_PT' | translate }}
-            </a>
-        </div>
-        <div class="column is-centered tanuki-box-column">
-            <img src="assets/img/kofi.png" width="200" />
-            <h3 class="subtitle is-3">Ko-fi.com</h3>
-            <p>{{ 'KF_TEXT' | translate }}</p>
-            <br/>
-            <a class="button is-primary" href="https://ko-fi.com/G2G082CE" target='_blank'>
-                {{ 'DONATE_KF' | translate }}
-            </a>
-        </div>
-        <div class="column is-centered tanuki-box-column has-text-centered">
-            <img src="assets/img/liberapay.png" />
-            <h3 class="subtitle is-3">Liberapay</h3>
-            <p>{{ 'LP_TEXT' | translate }}</p>
-            <br/>
-            <a class="button is-primary" href="https://liberapay.com/~29917/donate" target='_blank'>
-                {{ 'DONATE_LP' | translate }}
-            </a>
-        </div>
-    </div>
-</div>
+</section>
+
+<tanuki-footer></tanuki-footer

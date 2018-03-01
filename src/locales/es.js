@@ -11,6 +11,7 @@ var LOCALE_ES = {
     TAGLINE: "Una forma fácil de crear tu propio horario semanal de anime y manga",
     AIRING: "En emisión",
     UPCOMING: "Próximamente",
+    VIEW_SCHEDULE: "Ver horario",
 
     // Schedules
     THIS_WEEK_ANIME: "Emitiendo esta semana",

@@ -18,7 +18,6 @@ angular.module('app', ['airingController', 'upcomingController', 'AnimeService',
       name: 'home',
       url: '/',
       templateUrl: 'views/home.html',
-      //controller: 'animeController as vm'
     })
 
     .state({

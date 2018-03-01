@@ -1,41 +1,43 @@
-<div class="container is-mobile" ng-init="vm.get()">
-    <div class="columns" ng-if="!vm.ready">
-        <div class="column is-centered loading">
-            <span us-spinner></span>
+<tanuki-header></tanuki-header>
+
+<section class="section" id="content">
+    <div class="container is-mobile" ng-init="vm.get()">
+        <div class="columns" ng-if="!vm.ready">
+            <div class="column is-centered loading">
+                <span us-spinner></span>
+            </div>
         </div>
-    </div>
-    <div class="columns" ng-if="vm.ready">
-        <div class="column is-centered">
-            <h3 class="title is-3">
-                {{ 'THIS_WEEK_ANIME' | translate }}
-            </h3>
+        <div class="columns" ng-if="vm.ready">
+            <div class="column is-centered">
+                <h3 class="title is-3">
+                    {{ 'THIS_WEEK_ANIME' | translate }}
+                </h3>
+            </div>
         </div>
-    </div>
-    <div class="columns" ng-if="vm.ready">
-        <div class="column">
-            <h3 class="subtitle is-5">
-                {{ vm.weekStart | date: "dd/MM/yyyy" }} - {{ vm.weekEnd | date: "dd/MM/yyyy" }}
-            </h3>
+        <div class="columns" ng-if="vm.ready">
+            <div class="column">
+                <h3 class="subtitle is-5">
+                    {{ vm.weekStart | date: "dd/MM/yyyy" }} - {{ vm.weekEnd | date: "dd/MM/yyyy" }}
+                </h3>
+            </div>
         </div>
-    </div>
-        
-    <div class="columns" ng-if="vm.ready">
-        <div class="column is-centered" ng-repeat="day in vm.week">
-            <h3 class="ng-class: { today: vm.today == $index }"><strong>{{ day | translate }}</strong></h3>
-            <div ng-repeat="anime in vm.animeWeek | dayFilter: day">
-                <div class="tanuki-box">
-                    <a ng-href="https://kitsu.io/anime/{{anime.slug}}" target="_blank" class="anime-title">
-                        <img ng-src="{{ anime.posterImage.tiny }}"  class="anime-poster" />
-                        <div>{{ anime.canonicalTitle }}</div>
-                    </a>
-                    <span class="score">
-                        <i class="fas fa-heart" style="color: red" ng-if="anime.popularityRank"></i> #{{ anime.popularityRank }}
-                        <i class="fas fa-star" style="color: #cccc00" ng-if="anime.ratingRank"></i> #{{ anime.ratingRank }}
-                    </span>
-                    <div class="tag is-info is-rounded" ng-if="anime.status == 'upcoming'">{{ 'NEW_RELEASE'| translate }}</div>
-                    <!-- <span class="info">Ep 4</span> -->
+            
+        <div class="columns" ng-if="vm.ready">
+            <div class="column is-centered" ng-repeat="day in vm.week">
+                <h3 class="ng-class: { today: vm.today == $index }"><strong>{{ day | translate }}</strong></h3>
+                <div ng-repeat="anime in vm.animeWeek | dayFilter: day">
+                    <div class="tanuki-box">
+                        <a ng-href="https://kitsu.io/anime/{{anime.slug}}" target="_blank" class="anime-title">
+                            <img ng-src="{{ anime.posterImage.tiny }}"  class="anime-poster" />
+                            <div>{{ anime.canonicalTitle }}</div>
+                        </a>
+                        <!-- <div class="tag is-info is-rounded" ng-if="anime.status == 'upcoming'">{{ 'NEW_RELEASE'| translate }}</div>
+                        <span class="info">Ep 4</span> -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<tanuki-footer></tanuki-footer>
