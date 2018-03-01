@@ -8,12 +8,14 @@ var LOCALE_EN = {
 
     // Home
     WELCOME: "Welcome to Tanuki",
-    TAGLINE: "An easy way to build your own anime or manga weekly schedule",
-    AIRING:  "Airing",
-    UPCOMING: "Upcoming",
+    TAGLINE: "An easy way to build your own anime weekly schedule",
+    AIRING:  "Currently airing",
+    UPCOMING: "Upcoming shows",
+    VIEW_SCHEDULE: "View schedule",
 
     // Schedules
     THIS_WEEK_ANIME: "Airing this week",
+    NEW_RELEASE: "New release!",
 
     // Donations
     DONATION_TEXT: "With your donations, I can keep Tanuki alive. This money will be used to pay the server, SSL cerfificates, and anything we need for this.",
@@ -34,5 +36,12 @@ var LOCALE_EN = {
     thursday: "Thursday",
     friday: "Friday",
     saturday: "Saturday",
-    sunday: "Sunday"
+    sunday: "Sunday",
+
+    // Seasons
+
+    WINTER: "Winter",
+    SUMMER: "Summer",
+    SPRING: "Spring",
+    FALL: "Fall"
 }

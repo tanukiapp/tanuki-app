@@ -8,12 +8,14 @@ var LOCALE_ES = {
 
     // Home
     WELCOME: "Bienvenido a Tanuki",
-    TAGLINE: "Una forma fácil de crear tu propio horario semanal de anime y manga",
+    TAGLINE: "Una forma fácil de crear tu propio horario semanal de anime",
     AIRING: "En emisión",
     UPCOMING: "Próximamente",
+    VIEW_SCHEDULE: "Ver horario",
 
     // Schedules
     THIS_WEEK_ANIME: "Emitiendo esta semana",
+    NEW_RELEASE: "¡Nuevo lanzamiento!",
 
     // Donations
     DONATION_TEXT: "Con tus donaciones, puedo mantener vivo Tanuki. Este dinero será usado para pagar el servidor, certificados SSL, y cualquier cosa que necesitemos.",
@@ -34,5 +36,12 @@ var LOCALE_ES = {
     thursday: "Jueves",
     friday: "Viernes",
     saturday: "Sábado",
-    sunday: "Domingo"
+    sunday: "Domingo",
+
+    // Seasons
+
+    WINTER: "Invierno",
+    SUMMER: "Verano",
+    SPRING: "Primavera",
+    FALL: "Final"
 }

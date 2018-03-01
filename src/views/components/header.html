@@ -1,13 +1,16 @@
-<section class="hero" id="header">
+<!-- <section class="hero" id="header" ng-class="{ 'is-fullheight': view == 'home' }">
     <div class="hero-body">
         <div class="container is-mobile">
             <a ui-sref="home">
                 <img src="https://image.flaticon.com/icons/svg/235/235394.svg" width="50em" align="left" style="margin-right: 1em;" />
                 <h1 class="title">Tanuki</h1>
-            </a>
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <nav class="navbar is-transparent">
+            </a> -->
+            <nav class="navbar dark-red" id="header" role="navigation" aria-label="main navigation">
+                <nav class="navbar" id="header">
                     <div class="navbar-brand">
+                        <a class="navbar-item nav-icon" ui-sref="home" onclick="toggleMenu()">
+                            <img src="https://image.flaticon.com/icons/svg/235/235394.svg" width="50em" align="left" style="margin-right: 1em;" />
+                        </a>
                         <div class="navbar-burger burger" data-target="navbar">
                             <span class="nav-toggle" onclick="toggleMenu()"></span>
                             <span class="nav-toggle" onclick="toggleMenu()"></span>
@@ -17,11 +20,11 @@
                     
                     <div id="navbar" class="navbar-menu main-menu">
                         <div class="navbar-start">
-                            <a class="navbar-item white" ui-sref="home" onclick="toggleMenu()">
+                            <!-- <a class="navbar-item nav-button" ui-sref="home" onclick="toggleMenu()">
                                 {{ 'HOME' | translate }}
-                            </a>
-                            <div class="navbar-item has-dropdown is-hoverable">
-                                    <a class="navbar-link white">
+                            </a> -->
+                            <div class="navbar-item nav-button has-dropdown is-hoverable">
+                                    <a class="navbar-link nav-button">
                                         {{ 'SCHEDULES' | translate }}
                                     </a>
                                     <div class="navbar-dropdown is-boxed">
@@ -34,7 +37,7 @@
                                     </div>
                                 </div>
                             <div class="navbar-item has-dropdown is-hoverable">
-                                <a class="navbar-link white">
+                                <a class="navbar-link nav-button">
                                     {{ 'CONTRIBUTE' | translate }}
                                 </a>
                                 <div class="navbar-dropdown is-boxed">
@@ -55,6 +58,6 @@
                     </div>
                 </nav>
             </nav>
-        </div>
+        <!-- </div>
     </div>
-</section>
+</section> -->

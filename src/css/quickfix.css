@@ -4,19 +4,30 @@ html {
     background-color: #f7f7f7;
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-#content {
-    flex: 1;
-}
-
-#header {
+.dark-red {
     background-color: rgb(64,47,63);
 }
+
+
+/* Navbar fixes */
+.nav-button {
+    background-color: rgb(64,47,63) !important;
+    color: white !important;
+}
+
+.nav-button:hover {
+    background-color: rgb(35,25,34) !important;
+    color: white !important;
+}
+
+.navbar-dropdown {
+    margin-top: 0.35em !important;
+}
+
+.nav-icon {
+    background-color: rgb(64,47,63) !important;
+}
+/* --- */
 
 #header .title, #header .subtitle {
     color: white !important;
@@ -62,14 +73,6 @@ h3 {
     border-radius: 0.3em;
 }
 
-.tanuki-box a.anime-title img {
-    display: none;
-}
-
-.tanuki-box:hover > a.anime-title > img {
-    display: initial;
-}
-
 .column {
     word-wrap: break-word !important;    
 }
@@ -100,15 +103,11 @@ h3.today strong {
     color: white !important;
 }
 
-footer > div > div {
+footer > div {
     position: relative;
-    bottom: -6vh;
+    bottom: 0;
 }
 
-.tanuki-box > span.score {
-    display: none;
-}
-
-.tanuki-box:hover > span.score {
-    display: initial;
+.box {
+    min-height: 18em;
 }
