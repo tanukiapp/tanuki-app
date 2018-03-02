@@ -19,14 +19,6 @@ html {
     background-color: rgb(35,25,34) !important;
     color: white !important;
 }
-
-.navbar-dropdown {
-    margin-top: 0.35em !important;
-}
-
-.nav-icon {
-    background-color: rgb(64,47,63) !important;
-}
 /* --- */
 
 #header .title, #header .subtitle {
@@ -57,12 +49,22 @@ h3 {
     background-color: white;
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (max-width: 500px) {
     .tanuki-box-column {
         margin-top: 0.5em;
         margin-bottom: 0.5em;
     }
+
+    .nav-button {
+        background-color: #fff !important;
+        color: #363636 !important;
+    }
+
+    .tanuki-box img {
+        display: none;
+    }
 }
+
 .tanuki-box-column p {
     margin-bottom: 1em;
     min-height: 5vh;
@@ -103,11 +105,15 @@ h3.today strong {
     color: white !important;
 }
 
-footer > div {
+footer {
     position: relative;
     bottom: 0;
 }
 
 .box {
     min-height: 18em;
+}
+
+.loading {
+    min-height: 500px !important;
 }
