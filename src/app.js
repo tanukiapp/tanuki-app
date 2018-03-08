@@ -2,7 +2,7 @@
 
 angular.module('app', ['airingController', 'upcomingController', 'AnimeService', 'app.components', 'ui.router', 'angularSpinner', 'pascalprecht.translate'])
 
-.config(['$stateProvider', '$urlRouterProvider', '$translateProvider', function($stateProvider, $urlRouterProvider, $translateProvider) {
+.config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $translateProvider, $locationProvider) {
   $translateProvider
     .translations('en', LOCALE_EN)
     .translations('es', LOCALE_ES)
@@ -43,4 +43,5 @@ angular.module('app', ['airingController', 'upcomingController', 'AnimeService',
 
 
     $urlRouterProvider.when('', '/');
+    $locationProvider.html5Mode(true);
 }])
