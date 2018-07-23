@@ -21,13 +21,13 @@ var LOCALE_EN = {
     DONATION_TEXT: "With your donations, I can keep Tanuki alive. This money will be used to pay the server, SSL cerfificates, and anything we need for this.",
 
     DONATE_PT: "Donate with Patreon",
-    PT_TEXT: "Make a monthly donation. Pay what you want! Since 1€/1$",
+    PT_TEXT: "Make a monthly donation. Pay what you want! From 1€/1$",
 
     DONATE_KF: "Donate with Ko-Fi",
     KF_TEXT: "Buy me a coffee! Only 3€/3$",
 
     DONATE_LP: "Donate with Liberapay",
-    LP_TEXT: "Liberapay is an opensource solutions to microdonations. Pay what you want! Since 1€/1$",
+    LP_TEXT: "Liberapay is an opensource solutions to microdonations. Pay what you want! From 1€/1$",
 
     // Days
     monday: "Monday",
@@ -39,7 +39,6 @@ var LOCALE_EN = {
     sunday: "Sunday",
 
     // Seasons
-
     WINTER: "Winter",
     SUMMER: "Summer",
     SPRING: "Spring",
