@@ -3,7 +3,7 @@ var LOCALE_FR = {
     SCHEDULES: "Horaires",
     CONTRIBUTE: "Contribue",
     DONATIONS: "Dons",
-    REPORT: "Signales un bug",
+    REPORT: "Signale un bug",
     SUBMIT: "Propose fonctionnalité",
 
     // Home
@@ -18,7 +18,7 @@ var LOCALE_FR = {
     NEW_RELEASE: "Nouveau lancement!",
 
     // Donations
-    DONATION_TEXT: "Avec vos dons, je peux maintenir Tanuki en vie. L'argent sera utilisé pour payer le serveur, les SSL certificat et plus.",
+    DONATION_TEXT: "Avec vos dons, je peux maintenir Tanuki en vie. L'argent sera utilisé pour payer le serveur, les certificats SSL et plus.",
 
     DONATE_PT: "Don avec Patreon",
     PT_TEXT: "Faire une don tous les mois. Payez ce que tu veux! À partir de 1€/1$",
