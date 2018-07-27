@@ -6,9 +6,11 @@ angular.module('app', ['airingController', 'upcomingController', 'AnimeService',
   $translateProvider
     .translations('en', LOCALE_EN)
     .translations('es', LOCALE_ES)
-    .registerAvailableLanguageKeys(['en', 'es'], {
+    .translations('fr', LOCALE_FR)
+    .registerAvailableLanguageKeys(['en', 'es', 'fr'], {
       'en_*': 'en',
-      'es_*': 'es'
+      'es_*': 'es',
+      'fr_*': 'fr'
     })
     .determinePreferredLanguage()
     .useSanitizeValueStrategy('escape')

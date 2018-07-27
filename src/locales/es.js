@@ -39,9 +39,8 @@ var LOCALE_ES = {
     sunday: "Domingo",
 
     // Seasons
-
     WINTER: "Invierno",
     SUMMER: "Verano",
     SPRING: "Primavera",
-    FALL: "Final"
+    FALL: "Otoño"
 }
