@@ -7,7 +7,7 @@
 
 Tanuki is an opensource anime schedule built for **Kitsu community**. It uses the Kitsu.io API to get current airing and upcoming shows, and Angular with Bulma to create a schedule with your favourite shows.
 
-Currently is under development, you can see the [stable version here](https://tanuki.surge.sh).
+Currently is under development, you can see the [stable version here](https://www.tanukiapp.xyz/).
 
 ![](./tanuki.jpg)
 
