@@ -1,6 +1,4 @@
-<p align="center">
-    <img src="https://image.flaticon.com/icons/svg/235/235394.svg" width="250" />
-</p>
+# DEPRECATED! This repository has been inactive for several years and now it's pretty deprecated. We're moving to another repo for v2.
 
 # Tanuki
 ### Anime schedule for Kitsu
