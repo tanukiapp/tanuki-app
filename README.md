@@ -1,25 +1,20 @@
-# DEPRECATED! This repository has been inactive for several years and now it's pretty deprecated. We're moving to another repo for v2.
+# Tanuki - Anime schedule for Kitsu
 
-# Tanuki
-### Anime schedule for Kitsu
+Tanuki is a free and open-source anime calendar built for Kitsu community.
 
-Tanuki is an opensource anime schedule built for **Kitsu community**. It uses the Kitsu.io API to get current airing and upcoming shows, and Angular with Bulma to create a schedule with your favourite shows.
-
-Currently is under development, you can see the [stable version here](https://www.tanukiapp.xyz/).
-
-![](./tanuki.jpg)
+Currently is under development, you can see the stable version [here](https://www.tanukiapp.xyz/).
 
 ## Development
 
-Tanuki runs over **nginx http server**, however it has its own specific server-side application that makes it faster, secure and functional.
+See [CONTRIBUTING](CONTRIBUTING.md) to find guidelines and how to run this app localy.
 
-* **Tanuki App**. The frontend of Tanuki. It's a responsive website based on Angular and Bulma. You can found it on this repository.
+## Deprecated v1
 
-* **Tanuki Server**. The server-side application, where the magic occurs. Using [wopian's kitsu module](https://github.com/wopian/kitsu) and some JavaScript magic powders, it can build a anime schedule, just for you!
+Long time ago, I started building this with a first approximation to the concept. I was working on it during several months but due to my inexperience and lot of problems found during development, I stopped working on it until now.
 
-## Contributing
+Version 2 is being rewritten completely, using another framework (no more Angular) and trying to keep the old backend as it was, as long as possible, but implementing new powerful tools and technics.
 
-See CONTRIBUTING.md
+Check [meta]() if you want to know more.
 
 ## License
 
