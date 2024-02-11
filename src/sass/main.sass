@@ -1,0 +1,70 @@
+$tanuki-dark: #003b74
+$tanuki-shade: #004f9b
+$tanuki-shade-hover: #0059af
+
+$tanuki-light: #f7f5f7
+$tanuki-tint: #ddd4dd
+$tanuki-tint-hover: #d4c9d4
+  
+html, body
+  height: 100vh
+  overflow: visible
+  background-color: $tanuki-dark
+
+footer
+  color: black
+
+table tr td
+  span.code
+    font: 16px "Lucida Console", "Courier New", monospace
+    background-color: lightblue
+    padding: 0.45vh .5vh
+    border-radius: 0.85vh
+
+  padding: .5vh
+
+
+.is-tanuki
+  background-color: $tanuki-dark
+  margin: auto
+
+  h1, h2, h3
+    color: #eee
+
+  .box 
+    h1, h2, h3, h4
+      color: #eee
+      
+a.navbar-item
+  color: #eee
+
+a.box
+  max-width: 75%
+  background-color: $tanuki-shade
+  margin-top: 1vh
+  margin-bottom: 1vh
+  &:hover
+    background-color: $tanuki-shade-hover
+
+.button
+  min-width: 75%
+  text-align: left
+
+#title
+  margin-top: 13vh
+      
+#logo
+  height: 87vh
+  background-image: url('https://i.imgur.com/XoizZka.png')
+  background-position: center center
+  background-repeat: no-repeat
+  // background-size: cover
+  background-color: $tanuki-dark
+  
+.footer
+  background-color: $tanuki-dark
+  color: #eee
+  max-height: 1vh
+  a
+    text-decoration: underline
+    color: #eee

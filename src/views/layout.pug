@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title= "Tanuki | Anime calendar"
+    link(rel='stylesheet', href='/css/bulma.min.css')
+    link(rel='stylesheet', href='/css/style.min.css')
+
+    script(src='/js/_hyperscript.org.min.js')
+    script(src='/js/htmx.min.js')
+  
+  body
+    - if (view != 'home')
+        nav#header.navbar.is-tanuki(
+            aria-label="main navigation" 
+            role="navigation"
+            )
+            nav#header.navbar.container.is-tanuki
+            #navbar.navbar-menu.main-menu
+                .navbar-end
+                a.navbar-item.nav-button(
+                    onclick="toggleMenu()" 
+                    ui-sref="home"
+                    )
+                    strong HOME
+                a.navbar-item.nav-button(
+                    onclick="toggleMenu()" 
+                    ui-sref="airing"
+                    )
+                    strong AIRING
+                a.navbar-item.nav-button(
+                    onclick="toggleMenu()" 
+                    ui-sref="upcoming"
+                    )
+                    strong UPCOMING
+                a.navbar-item.nav-button(
+                    onclick="toggleMenu()" 
+                    ui-sref="donate"
+                    )
+                    strong DONATIONS
+                a.navbar-item.nav-button(
+                    onclick="toggleMenu()" 
+                    target="_blank" 
+                    href="https://github.com/JuanjoSalvador/tanuki/issues?q=is%3Aissue+is%3Aopen+label%3Abug"
+                    )
+                    strong REPORT
+        
+    block content
+
+    footer.footer
+        .content.has-text-centered
+            p
+                | Made with ❤️ by 
+                a(href="https://jsalvador.me/") Juanjo Salvador
+                |  &  
+                a(href="https://ypsilenna.art/") Ypsilenna
+                |.
+            p
+                | Tanuki logo by 
+                a(href="https://ypsilenna.art/") Ypsilenna
+                | .
