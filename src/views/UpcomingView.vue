@@ -1,7 +1,6 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+<template lang="pug">
+.container.is-tanuki 
+  h1.title.is-1 Upcoming anime
 </template>
 
 <style>

@@ -1,3 +1,4 @@
+import './assets/css/bulma.min.css'
 import './assets/main.css'
 
 import { createApp } from 'vue'

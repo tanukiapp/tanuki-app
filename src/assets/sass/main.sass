@@ -1,15 +1,21 @@
 $tanuki-dark: #003b74
 $tanuki-shade: #004f9b
 $tanuki-shade-hover: #0059af
-
-$tanuki-light: #f7f5f7
-$tanuki-tint: #ddd4dd
-$tanuki-tint-hover: #d4c9d4
+$default-text: #eee
   
 html, body
   height: 100vh
+  max-width: 95%
   overflow: visible
   background-color: $tanuki-dark
+  color: $default-text !important
+
+section#content
+  h3.title, h3.subtitle
+    color: $default-text
+
+nav#header
+  max-width: 95%
 
 footer
   color: black
@@ -29,14 +35,14 @@ table tr td
   margin: auto
 
   h1, h2, h3
-    color: #eee
+    color: $default-text
 
   .box 
     h1, h2, h3, h4
-      color: #eee
+      color: $default-text
       
 a.navbar-item
-  color: #eee
+  color: $default-text
 
 a.box
   max-width: 75%
@@ -63,8 +69,56 @@ a.box
   
 .footer
   background-color: $tanuki-dark
-  color: #eee
+  color: $default-text
   max-height: 1vh
   a
     text-decoration: underline
-    color: #eee
+    color: $default-text
+
+.anime-item-box
+  color: $default-text
+  strong
+    color: $default-text
+  
+hr
+  background-color: $tanuki-shade
+  
+strong
+  color: $default-text
+
+.day-item
+  min-height: 15vh
+  margin-top: 2.5vh
+  
+  .title
+    color: $default-text
+
+.anime-container
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  
+  .anime-item
+    padding: 0.5vh
+    margin: 0.5vh
+    width: 30vh
+    min-height: 5vh
+    max-height: 7vh
+    background-color: $tanuki-shade
+    
+    img
+      float: left
+      margin-right: 1.5vh
+      height: 6vh
+    
+    .anime-episode
+      float: left
+      margin-right: 1vh
+
+    .anime-time
+      float: right
+      
+    .anime-title
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis

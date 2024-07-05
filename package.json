@@ -29,8 +29,11 @@
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^24.0.0",
     "prettier": "^3.0.3",
+    "pug": "^3.0.3",
     "start-server-and-test": "^2.0.3",
     "vite": "^5.0.11",
-    "vitest": "^1.2.2"
+    "vitest": "^1.2.2",
+    "vue-final-modal": "^3.4.11",
+    "vue-pug-plugin": "^2.0.3"
   }
 }
