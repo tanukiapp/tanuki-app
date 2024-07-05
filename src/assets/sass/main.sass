@@ -1,0 +1,124 @@
+$tanuki-dark: #003b74
+$tanuki-shade: #004f9b
+$tanuki-shade-hover: #0059af
+$default-text: #eee
+  
+html, body
+  height: 100vh
+  max-width: 95%
+  overflow: visible
+  background-color: $tanuki-dark
+  color: $default-text !important
+
+section#content
+  h3.title, h3.subtitle
+    color: $default-text
+
+nav#header
+  max-width: 95%
+
+footer
+  color: black
+
+table tr td
+  span.code
+    font: 16px "Lucida Console", "Courier New", monospace
+    background-color: lightblue
+    padding: 0.45vh .5vh
+    border-radius: 0.85vh
+
+  padding: .5vh
+
+
+.is-tanuki
+  background-color: $tanuki-dark
+  margin: auto
+
+  h1, h2, h3
+    color: $default-text
+
+  .box 
+    h1, h2, h3, h4
+      color: $default-text
+      
+a.navbar-item
+  color: $default-text
+
+a.box
+  max-width: 75%
+  background-color: $tanuki-shade
+  margin-top: 1vh
+  margin-bottom: 1vh
+  &:hover
+    background-color: $tanuki-shade-hover
+
+.button
+  min-width: 75%
+  text-align: left
+
+#title
+  margin-top: 13vh
+      
+#logo
+  height: 87vh
+  background-image: url('https://i.imgur.com/XoizZka.png')
+  background-position: center center
+  background-repeat: no-repeat
+  // background-size: cover
+  background-color: $tanuki-dark
+  
+.footer
+  background-color: $tanuki-dark
+  color: $default-text
+  max-height: 1vh
+  a
+    text-decoration: underline
+    color: $default-text
+
+.anime-item-box
+  color: $default-text
+  strong
+    color: $default-text
+  
+hr
+  background-color: $tanuki-shade
+  
+strong
+  color: $default-text
+
+.day-item
+  min-height: 15vh
+  margin-top: 2.5vh
+  
+  .title
+    color: $default-text
+
+.anime-container
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  
+  .anime-item
+    padding: 0.5vh
+    margin: 0.5vh
+    width: 30vh
+    min-height: 5vh
+    max-height: 7vh
+    background-color: $tanuki-shade
+    
+    img
+      float: left
+      margin-right: 1.5vh
+      height: 6vh
+    
+    .anime-episode
+      float: left
+      margin-right: 1vh
+
+    .anime-time
+      float: right
+      
+    .anime-title
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
